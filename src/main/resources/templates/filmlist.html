@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<title>Now movie</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
+</head>
+
+<body>
+
+<div class="container" style="padding:20px; text-align:center">
+<h1>Your Movie List</h1>
+</div>
+<div class="col-md-10" style="padding:15px">
+	<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+</div>
+<div class="col-md-10" style="padding:15px">
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Sign out" class="btn btn-sm btn-danger"/>
+	</form>
+</div>
+
+<div class="container" style="padding:20px; text-align:center">
+<h2>Movies You Have Watched</h2>
+</div>
+
+<table class="table table-striped" style="text-align: center" >
+<thead>
+	<tr>
+		<th> Movie </th>
+		<th> Release Date </th>
+		<th> Genre </th>
+		<th> Director </th>
+		<th> Cast </th>
+		<th> Length (minutes) </th>
+		<th> Production Company </th>
+		<th> Your Review </th>
+		<th> Your Grade </th>
+		<th></th>
+		<th></th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr th:each = "film:${films}">
+	<td th:text = "${film.title}"></td>
+	<td th:text = "${film.releasedate}"></td>
+	<td th:text = "${film.genre.genrename}"></td>
+	<td th:text = "${film.director}"></td>
+	<td th:text = "${film.cast}"></td>
+	<td th:text = "${film.length}"></td>
+	<td th:text = "${film.productioncompany}"></td>
+	<td th:text = "${film.review}"></td>
+	<td th:text = "${film.mygrade + '/' + film.maxgrade}"></td>
+		<td><a class="btn btn-warning" th:href="@{/edit/{id}(id=${film.id})}">Edit</a>
+		<td><a th:href="@{/delete/{id}(id=${film.id})}" class="btn btn-xs btn-danger">Delete</a></td>
+	</tr>
+</tbody>
+</table>
+
+<div class="col-md-10" style="padding:15px">
+<a class="btn btn-success" href="/add">Add movie</a>
+</div>
+</body>
+
+</html>
