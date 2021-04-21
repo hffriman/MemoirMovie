@@ -41,7 +41,7 @@ public class MemoirmovieApplication {
 			grepo.save(new Genre("Action"));
 			grepo.save(new Genre("Thriller"));
 			grepo.save(new Genre("Avant Garde"));
-						
+			
 			log.info("Fetch all screenings");
 			
 			for (Film film : frepo.findAll()) {

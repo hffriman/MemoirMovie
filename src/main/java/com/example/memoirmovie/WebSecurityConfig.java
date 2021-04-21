@@ -24,7 +24,7 @@ protected void configure(HttpSecurity http) throws Exception {
 http
 	.authorizeRequests().antMatchers("/css/**").permitAll()
 	.and()
-	.authorizeRequests().antMatchers("/signup", "/saveuser").permitAll()
+	.authorizeRequests().antMatchers("/signup", "/saveuser", "/resetpassword", "/savenewspassword").permitAll()
 	.and()
 	.authorizeRequests().anyRequest().authenticated()
 	.and()

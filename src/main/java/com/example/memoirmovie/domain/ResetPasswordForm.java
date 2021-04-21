@@ -3,14 +3,14 @@ package com.example.memoirmovie.domain;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-public class SignupForm {
+public class ResetPasswordForm {
 
 	@NotEmpty
 	@Size(min=5, max=30)
 	private String username = "";
 	
 	@NotEmpty
-	@Size(min=1, max=50)
+	@Size(min=10, max=50)
 	private String question = "";
 	
 	@NotEmpty
@@ -30,6 +30,10 @@ public class SignupForm {
 
 	public String getUsername() {
 		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getQuestion() {
@@ -72,13 +76,6 @@ public class SignupForm {
 		this.role = role;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	@Override
-	public String toString() {
-		return "SignupForm [username=" + username + ", question=" + question + ", answer=" + answer + ", password="
-				+ password + ", passwordCheck=" + passwordCheck + ", role=" + role + "]";
-	}	
+	
 }
+

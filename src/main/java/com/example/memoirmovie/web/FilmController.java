@@ -72,6 +72,7 @@ public class FilmController {
 		public String editFilm(@PathVariable("id") Long id, Model model) {
 
 			model.addAttribute("film", frepo.findById(id));
+			model.addAttribute("genres", grepo.findAll());
 
 			return "editfilm";
 			

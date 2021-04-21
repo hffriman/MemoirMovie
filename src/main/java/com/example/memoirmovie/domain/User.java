@@ -1,5 +1,6 @@
 package com.example.memoirmovie.domain;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,17 +21,27 @@ public class User {
 	@Column(name = "username", nullable = false, unique = true)
 	private String username;
 	
+	@Column(name = "question", nullable = false)
+	private String question;
+	
+	@Column(name = "answer", nullable = false)
+	private String answer;
+	
 	@Column(name = "password", nullable = false)
 	private String passwordHash;
 	
 	@Column(name = "role", nullable = false)
 	private String role;
 	
+	
+	
 	public User() {}
 	
-	public User(String username, String passwordHash, String role) {
+	public User(String username, String question, String answer, String passwordHash, String role) {
 		super();
 		this.username = username;
+		this.question = question;
+		this.answer = answer;
 		this.passwordHash = passwordHash;
 		this.role = role;
 	}
@@ -51,6 +62,22 @@ public class User {
 		this.username = username;
 	}
 
+	public String getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
 	public String getPasswordHash() {
 		return passwordHash;
 	}
@@ -69,7 +96,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", passwordHash=" + passwordHash + ", role=" + role + "]";
-	}
-	
+		return "User [id=" + id + ", username=" + username + ", question=" + question + ", answer=" + answer
+				+ ", passwordHash=" + passwordHash + ", role=" + role + "]";
+	}	
 }

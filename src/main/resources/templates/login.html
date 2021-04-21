@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
 	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 	<head>
-		<title>Spring Security Example</title>
+		<title>Film Review Application</title>
 		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
 	</head>
 	<body>
 	<div style="text-align:center">
-	<h1>Your Movie Reviews</h1>
-	<h2>A Memoir of Films and Your Opinions</h2>
+	<h1>Film Reviewer Application</h1>
+	<h2>A Memoir of Films and Opinions</h2>
 	<br>
 	<br>
 	</div>
@@ -25,7 +25,8 @@
 			<div><label> Password : <input type="password" name="password" class="form-control"/></label></div>
 			<div><input type="submit" value="Sign In" class="btn btn-primary"/></div>
 		</form>
-		<a th:href="@{/signup}">Sign-up</a>
+		<a th:href="@{/signup}">Sign-up</a> <br>
+		<a th:href="@{/resetpassword}">Did You Forget Your Password?</a>
 		</div>
 	</body>
 </html>
