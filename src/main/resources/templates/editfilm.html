@@ -63,20 +63,31 @@
 		<div style="clear: both; display:block; height:10px"></div>
 	</div>
 
-<div class="form-group">
+	<div class="form-group">
 		<label for="productioncompany">Production Company</label> <br>
 		<input type="text" class="col-sm-5 control-label" id="productioncompany" th:field="*{productioncompany}"/>
 		<div style="clear: both; display:block; height:10px"></div>
 	</div>
 	
-		
 	<div class="form-group">
-		<label for="review">Your Review</label> <br>
-		<textarea id="review" rows="7" cols="50" th:field="*{review1}"></textarea>
+		<label for="review1">Start Your Review From Here</label> <br>
+		<textarea id="review1" rows="7" cols="50" maxlength="255" th:field="*{review1}"></textarea>
 		<div style="clear: both; display:block; height:10px"></div>
 	</div>
 	
-		<div class="form-group">
+	<div class="form-group">
+		<label for="review2">Continue Your Review Here</label> <br>
+		<textarea id="review2" rows="7" cols="50" maxlength="255" th:field="*{review2}"></textarea>
+		<div style="clear: both; display:block; height:10px"></div>
+	</div>
+	
+	<div class="form-group">
+		<label for="review3">Continue Your Review Here</label> <br>
+		<textarea id="review3" rows="7" cols="50" maxlength="255" th:field="*{review3}"></textarea>
+		<div style="clear: both; display:block; height:10px"></div>
+	</div>	
+	
+	<div class="form-group">
 		<label for="mygrade">Your Grade</label> <br>
 		<input type="number" size="1" maxlength="1" id="mygrade" th:field="*{mygrade}" min="1" max="5" style="text-align:center"/>
 		<span> / 5 </span>
