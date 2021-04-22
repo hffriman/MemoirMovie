@@ -231,10 +231,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 		// Creating a toString function to every attribute of the Film class
 		@Override
 		public String toString() {
-			return "Film [id=" + id + ", writtenby=" + writtenby+ ", title=" + title + ", releasedate=" + releasedate
-					+ ", length=" + length + ", director=" + director + ", cast=" + cast + ", productioncompany="
-					+ productioncompany + ", review1=" + review1 + ", review2=" + review2 + ", review3=" + review3
-					+ ", mygrade=" + mygrade + ", maxgrade=" + maxgrade + ", genre=" + genre + "]";
+			return "";
 		}
 	
 	}

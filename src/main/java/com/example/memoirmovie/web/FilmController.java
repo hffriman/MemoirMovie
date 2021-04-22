@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.memoirmovie.domain.GenreRepository;
 import com.example.memoirmovie.domain.Film;
 import com.example.memoirmovie.domain.FilmRepository;
+
+
+
+
 	
 	// Creating a FilmController
 	// that defines what will happen
@@ -123,7 +127,7 @@ import com.example.memoirmovie.domain.FilmRepository;
 		// ---> submitted the value of id after the endpoint "/edit",
 		// ---> but the endpoint can also be accessed by pressing
 		// ---> a button or a link
-			@RequestMapping(value = "/edit/{id}")
+			@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
 			public String editFilm(@PathVariable("id") Long id, Model model) {
 	
 				model.addAttribute("film", frepo.findById(id));
@@ -132,6 +136,14 @@ import com.example.memoirmovie.domain.FilmRepository;
 				return "editfilm";
 				
 			}
+			
+			/*
+			@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+			public String modify(@PathVariable("id") Long bloodPressureId, Model model) {
+				model.addAttribute("bloodpressure", repository.findById(bloodPressureId));
+				return "edit";
+			}
+			*/
 			
 		// Creating a function deleteFilm, which uses FilmRepository
 		// to delete a Film object based on the submitted id attribute,
