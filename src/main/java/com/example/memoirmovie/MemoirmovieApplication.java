@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.memoirmovie.domain.Genre;
 import com.example.memoirmovie.domain.GenreRepository;
-import com.example.memoirmovie.domain.UserRepository;
 import com.example.memoirmovie.domain.Film;
 import com.example.memoirmovie.domain.FilmRepository;
 
