@@ -30,21 +30,20 @@ public class MemoirmovieApplication {
 	// Creating a CommandLineRunner function which is 
 	// executed every time the program starts functioning
 	@Bean
-	public CommandLineRunner demo(FilmRepository frepo, GenreRepository grepo, UserRepository urepo) {
+	public CommandLineRunner demo(FilmRepository frepo, GenreRepository grepo) {
 		
 		
 		// The function returns arguments and converts them to the database
 		return (args) -> {
 			 
-			// Using UserRepository and GenreRepository
-			// to delete all their objects in order to
+			// Using GenreRepository
+			// to delete all Genre objects in order to
 			// prevent them to multiply every time the
 			// application is rebooted
-			urepo.deleteAll();
 			grepo.deleteAll();
 			
 			// Using the Logger object to send
-			// a message to the consolein order to
+			// a message to the console in order to
 			// notify the developer when the
 			// GenreRepository starts to
 			// create Genre objects
