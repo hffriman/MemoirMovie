@@ -76,7 +76,6 @@ Users can also edit and delete their reviews. However, as of now, I have not man
 During the registration, the user must write not only their usernames and passwords but also safety question and safety answer, which would be used to restore the forgotten password. However, this functionality does not work correctly, unfortunately.
 <br/>
 
-#### Link to Application
 <a href="https://github.com/hffriman/MemoirMovie"><strong>Link to Movie Memoir's Application is Here</strong></a> <br/>
 Note: It takes some time for the page to load, so please be patient
 <br/>
