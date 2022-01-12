@@ -79,13 +79,13 @@ During the registration, the user must write not only their usernames and passwo
 <a href="https://github.com/hffriman/MemoirMovie"><strong>Link to Movie Memoir's Application is Here</strong></a> <br/>
 Note: It takes some time for the page to load, so please be patient
 <br/>
+<br/>
 
 #### What I FINISHED:
 
 1. ADD, EDIT and DELETE functions for Film reviews
 2. Registration and Login
 3. Visual style of the application
-<br/>
 
 #### What I DID NOT FINISH:
 
