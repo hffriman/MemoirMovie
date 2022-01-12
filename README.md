@@ -74,16 +74,19 @@ MemoirMovie's purpose is to provide a service for film reviews: each user can ad
 Users can also edit and delete their reviews. However, as of now, I have not managed to create a personal relation between the user and their reviews: this means that every review, as well as the rights to edit and delete them, are available for everyone who has signed up to the application. This is an issue I have failed to fix, unfortunately.
 
 During the registration, the user must write not only their usernames and passwords but also safety question and safety answer, which would be used to restore the forgotten password. However, this functionality does not work correctly, unfortunately.
+<br/>
 
 #### Link to Application
 <a href="https://github.com/hffriman/MemoirMovie"><strong>Link to Movie Memoir's Application is Here</strong></a> <br/>
 Note: It takes some time for the page to load, so please be patient
+<br/>
 
 #### What I FINISHED:
 
 1. ADD, EDIT and DELETE functions for Film reviews
 2. Registration and Login
 3. Visual style of the application
+<br/>
 
 #### What I DID NOT FINISH:
 
@@ -93,6 +96,8 @@ Note: It takes some time for the page to load, so please be patient
    - Recovery based on the users' own safety questions and answers
 3. The relation between the user and their reviews
    - The user's name is automatically attached to the review object
+<br/>
+<br/>
 
 ### Screenshots
 
