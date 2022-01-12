@@ -28,10 +28,10 @@ My final project in the Server Programming course of Haaga-Helia UAS
 <!-- PROJECT LOGO -->
 <br />
 
-<h3 align="center">Personal Trainer</h3>
+<h3 align="center">MemoirMovie</h3>
 
   <p align="center">
-    The Final Project for the Course "Front End Programming" of Haaga-Helia UAS
+    The Final Project in the Server Programming course of Haaga-Helia UAS
     <br />
     <a href="https://github.com/hffriman/MemoirMovie"><strong>Explore the docs »</strong></a>
     <br />
