@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.memoirmovie.domain.Genre;
 import com.example.memoirmovie.domain.GenreRepository;
+import com.example.memoirmovie.domain.UserRepository;
 import com.example.memoirmovie.domain.Film;
 import com.example.memoirmovie.domain.FilmRepository;
 
@@ -29,7 +30,7 @@ public class MemoirmovieApplication {
 	// Creating a CommandLineRunner function which is 
 	// executed every time the program starts functioning
 	@Bean
-	public CommandLineRunner demo(FilmRepository frepo, GenreRepository grepo) {
+	public CommandLineRunner demo(FilmRepository frepo, GenreRepository grepo, UserRepository urepo) {
 		
 		
 		// The function returns arguments and converts them to the database
@@ -40,6 +41,8 @@ public class MemoirmovieApplication {
 			// prevent them to multiply every time the
 			// application is rebooted
 			grepo.deleteAll();
+			
+			urepo.deleteAll();
 			
 			// Using the Logger object to send
 			// a message to the console in order to
